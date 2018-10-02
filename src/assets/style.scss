@@ -1,0 +1,27 @@
+@import url('//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
+
+* {
+    font-family: Hack;
+}
+
+.login {
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    border: 1px solid;
+    .error {
+        color: red;
+    }
+    .success {
+        color: green;
+    }
+    input {
+        border: 1px solid;
+        padding: 5px;
+        margin: 2px;
+    }
+    button {
+        border: 1px solid;
+        background: transparent;
+    }
+}

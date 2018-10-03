@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import firebase from 'firebase'
-Vue.config.productionTip = false
-let app
+import VueFire from 'vuefire'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+
+Vue.use(VueFire)
+
 var config = {
   apiKey: 'AIzaSyApcmJlfa9oUaulQoHfKWPBf6xs4VUkEGQ',
   authDomain: 'zwebwriter.firebaseapp.com',
@@ -15,6 +18,11 @@ var config = {
   messagingSenderId: '819725404170'
 }
 firebase.initializeApp(config)
+
+Vue.config.productionTip = false
+
+let app
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (!app) {
     app = new Vue({
@@ -25,4 +33,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     })
   }
 })
+
+export const db = firebase.firestore()
 /* eslint-disable no-new */

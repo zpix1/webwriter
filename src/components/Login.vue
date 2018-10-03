@@ -29,7 +29,7 @@ export default {
         (user) => {
           this.error = ''
           this.success = 'Successfully logged in'
-          this.$router.replace('writer')
+          this.$router.replace('menu')
         },
         (err) => {
           this.success = ''

@@ -1,5 +1,6 @@
-@import url('//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
+$break-small: 600px;
 
+@import url('//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
 * {
     font-family: Hack;
 }
@@ -7,6 +8,7 @@
 .login {
     text-align: center;
     margin: auto;
+    padding: 10px;
     max-width: 400px;
     border: 1px solid;
     .error {
@@ -15,14 +17,26 @@
     .success {
         color: green;
     }
-    input {
-        border: 1px solid;
-        padding: 5px;
-        margin: 2px;
-    }
-    button {
-        border: 1px solid;
-        background: transparent;
-        padding: 2px 10px 2px 10px;
-    }
+}
+
+input {
+    border: 1px solid;
+    padding: 5px;
+    margin: 2px;
+}
+
+button {
+    border: 1px solid;
+    background: transparent;
+    padding: 5px 10px 5px 10px;
+    margin: 2px;
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list-wrapper {
+    text-align: left;
 }

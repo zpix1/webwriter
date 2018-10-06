@@ -1,4 +1,5 @@
 <template>
+  <div class="login-wrapper">
     <div class="login">
       <h3>Sign Up</h3>
       <input v-model="email" type="text" placeholder="email"><br>
@@ -8,6 +9,7 @@
       <p class="success">{{ success }}</p>
       <p>Already have an account? Log in <router-link to="/login">here</router-link>!</p>
     </div>
+  </div>
 </template>
 
 <script>

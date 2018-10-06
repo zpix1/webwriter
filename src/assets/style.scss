@@ -1,11 +1,26 @@
+// @import './assets/reset.scss';
+@import url('//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
+
 $break-small: 600px;
 
-@import url('//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
 * {
     font-family: Hack;
 }
 
-.login {
+html, body, #app {
+    height: 100%;
+    margin: 0;
+}
+
+#app {
+    display: block;
+}
+
+.login-wrapper {
+    padding: 8px;
+}
+
+.login, .menu {
     text-align: center;
     margin: auto;
     padding: 10px;
@@ -16,6 +31,37 @@ $break-small: 600px;
     }
     .success {
         color: green;
+    }
+}
+
+
+
+.editor {
+    height: 100%;
+    .wrapper {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 16px);
+    }
+    textarea {
+        box-sizing: border-box;
+        margin: 0;
+        width: 100%;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        resize: none;
+        &.value-text {
+            height: 100%;
+        }
+        &.header {
+            font-size: 40px;
+        }
+    }
+
+    .save-info {
+        text-align: right;
     }
 }
 
@@ -30,11 +76,13 @@ button {
     background: transparent;
     padding: 5px 10px 5px 10px;
     margin: 2px;
+    outline: none;
 }
 
 a {
     text-decoration: underline;
     cursor: pointer;
+    color: black;
 }
 
 .list-wrapper {
